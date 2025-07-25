@@ -2,8 +2,10 @@ import { NextResponse } from "next/server"
 import { promises as fs } from "fs"
 import path from "path"
 
-// Forzar el uso del runtime de Node.js para esta API
+// Configuración específica para Vercel - Next.js 15
 export const runtime = "nodejs"
+export const dynamic = "force-dynamic"
+export const maxDuration = 30
 
 // Interfaz para un elemento RSS individual
 interface RSSItem {
@@ -132,11 +134,18 @@ async function fetchRSSSource(source: { url: string; name: string }): Promise<RS
   try {
     console.log(`Obteniendo RSS de: ${source.name} (${source.url})`)
 
+    const controller = new AbortController()
+    const timeoutId = setTimeout(() => controller.abort(), 8000) // 8 segundos timeout
+
     const response = await fetch(source.url, {
       headers: {
         "User-Agent": "RSS-Reader/1.0",
+        Accept: "application/rss+xml, application/xml, text/xml",
       },
+      signal: controller.signal,
     })
+
+    clearTimeout(timeoutId)
 
     if (!response.ok) {
       throw new Error(`Error HTTP! estado: ${response.status}`)
@@ -173,13 +182,15 @@ async function fetchRSSSource(source: { url: string; name: string }): Promise<RS
 async function fetchAllRSSFeeds(): Promise<RSSFeed> {
   const allItems: RSSItem[] = []
 
-  // Obtener todas las fuentes en paralelo
+  // Obtener todas las fuentes en paralelo con Promise.allSettled para manejar errores
   const promises = RSS_SOURCES.map((source) => fetchRSSSource(source))
-  const results = await Promise.all(promises)
+  const results = await Promise.allSettled(promises)
 
-  // Combinar todos los elementos
-  results.forEach((items) => {
-    allItems.push(...items)
+  // Combinar todos los elementos exitosos
+  results.forEach((result) => {
+    if (result.status === "fulfilled") {
+      allItems.push(...result.value)
+    }
   })
 
   // Ordenar por fecha de publicación (más recientes primero)
@@ -230,19 +241,43 @@ async function loadFeedData(): Promise<RSSFeed | null> {
 
 export async function GET() {
   try {
+    console.log("🚀 Iniciando obtención de feeds RSS...")
+
     // Intentar cargar datos existentes primero
     let feed = await loadFeedData()
 
-    // Si no hay datos o los datos son más antiguos de 1 hora (para desarrollo)
+    // Si no hay datos o los datos son más antiguos de 1 hora
     if (!feed || new Date().getTime() - new Date(feed.lastUpdated).getTime() > 60 * 60 * 1000) {
-      console.log("Obteniendo datos frescos de RSS...")
+      console.log("📡 Obteniendo datos frescos de RSS...")
       feed = await fetchAllRSSFeeds()
       await saveFeedData(feed)
+    } else {
+      console.log("📋 Usando datos RSS en cache")
     }
 
-    return NextResponse.json(feed)
+    console.log(`✅ Devolviendo ${feed.items.length} elementos RSS`)
+
+    return NextResponse.json(feed, {
+      status: 200,
+      headers: {
+        "Content-Type": "application/json",
+        "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=86400",
+      },
+    })
   } catch (error) {
-    console.error("Error en la API RSS:", error)
-    return NextResponse.json({ error: "Error al obtener feeds RSS" }, { status: 500 })
+    console.error("❌ Error en la API RSS:", error)
+
+    // Devolver un feed vacío en caso de error
+    const errorFeed: RSSFeed = {
+      items: [],
+      lastUpdated: new Date().toISOString(),
+    }
+
+    return NextResponse.json(errorFeed, {
+      status: 200,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
   }
 }

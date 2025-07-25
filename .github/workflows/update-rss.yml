@@ -30,10 +30,25 @@ jobs:
       env:
         RSS_SOURCES: ${{ vars.RSS_SOURCES || '' }}
         
+    - name: Ejecutar tests
+      run: npm test
+      
     - name: Construir aplicación
       run: npm run build
       
+    - name: Verificar secrets de Vercel
+      id: check-secrets
+      run: |
+        if [ -z "${{ secrets.VERCEL_TOKEN }}" ] || [ -z "${{ secrets.ORG_ID }}" ] || [ -z "${{ secrets.PROJECT_ID }}" ]; then
+          echo "secrets-available=false" >> $GITHUB_OUTPUT
+          echo "⚠️ Secrets de Vercel no configurados. Saltando despliegue."
+        else
+          echo "secrets-available=true" >> $GITHUB_OUTPUT
+          echo "✅ Secrets de Vercel configurados correctamente."
+        fi
+        
     - name: Desplegar a Vercel
+      if: steps.check-secrets.outputs.secrets-available == 'true'
       uses: amondnet/vercel-action@v25
       with:
         vercel-token: ${{ secrets.VERCEL_TOKEN }}
@@ -41,10 +56,24 @@ jobs:
         vercel-project-id: ${{ secrets.PROJECT_ID }}
         vercel-args: '--prod'
         
+    - name: Información de despliegue
+      run: |
+        if [ "${{ steps.check-secrets.outputs.secrets-available }}" == "true" ]; then
+          echo "🚀 Aplicación desplegada exitosamente a Vercel"
+        else
+          echo "📝 Build completado. Para habilitar despliegue automático:"
+          echo "1. Ve a tu repositorio en GitHub"
+          echo "2. Settings > Secrets and variables > Actions"
+          echo "3. Agrega los siguientes secrets:"
+          echo "   - VERCEL_TOKEN: Tu token de Vercel"
+          echo "   - ORG_ID: Tu Organization ID de Vercel"
+          echo "   - PROJECT_ID: Tu Project ID de Vercel"
+        fi
+        
     - name: Commit de datos RSS actualizados
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add data/rss-feed.json
-        git diff --staged --quiet || git commit -m "Actualizar feeds RSS - $(date)"
-        git push
+        git add data/rss-feed.json || echo "No hay cambios en RSS data"
+        git diff --staged --quiet || git commit -m "Actualizar feeds RSS - $(date)" || echo "No hay cambios para commitear"
+        git push || echo "No hay cambios para pushear"

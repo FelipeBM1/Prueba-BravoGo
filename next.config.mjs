@@ -27,6 +27,10 @@ const nextConfig = {
     unoptimized: true,
   },
   swcMinify: true,
+  // Configuración específica para Vercel
+  experimental: {
+    serverComponentsExternalPackages: [],
+  },
 }
 
 export default nextConfig

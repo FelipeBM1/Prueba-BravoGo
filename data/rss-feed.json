@@ -1,204 +1,6 @@
 {
   "items": [
     {
-      "id": "Hacker News-https://news.ycombinator.com/item?id=44679713",
-      "title": "A WebTransport Implementation in C",
-      "description": "Sin descripción",
-      "content": "Sin contenido",
-      "link": "https://github.com/andrewmd5/libwtf",
-      "pubDate": "Fri, 25 Jul 2025 05:00:44 +0000",
-      "source": "Hacker News"
-    },
-    {
-      "id": "Hacker News-https://news.ycombinator.com/item?id=44679709",
-      "title": "Seems like some people might develop hypertension from Creatine",
-      "description": "Sin descripción",
-      "content": "Sin contenido",
-      "link": "https://old.reddit.com/r/Supplements/comments/1epu735/consider_monitoring_bp_if_you_take_creatine/",
-      "pubDate": "Fri, 25 Jul 2025 05:00:28 +0000",
-      "source": "Hacker News"
-    },
-    {
-      "id": "Hacker News-https://news.ycombinator.com/item?id=44679699",
-      "title": "Vibe coding turns Swedish AI unicorn into fastest growing software startup",
-      "description": "Sin descripción",
-      "content": "Sin contenido",
-      "link": "https://www.forbes.com.au/news/entrepreneurs/vibe-coding-turned-this-swedish-ai-unicorn-into-the-fastest-growing-software-startup-ever/",
-      "pubDate": "Fri, 25 Jul 2025 04:59:01 +0000",
-      "source": "Hacker News"
-    },
-    {
-      "id": "Hacker News-https://news.ycombinator.com/item?id=44679695",
-      "title": "Context Engineering for AI Agents: Lessons from Building Manus",
-      "description": "Sin descripción",
-      "content": "Sin contenido",
-      "link": "https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus",
-      "pubDate": "Fri, 25 Jul 2025 04:57:28 +0000",
-      "source": "Hacker News"
-    },
-    {
-      "id": "Dev.to JavaScript-https://dev.to/seendesignlab/zscsdcsd-3390",
-      "title": "zscsdcsd",
-      "description": "Sin descripción",
-      "content": "Sin contenido",
-      "link": "https://dev.to/seendesignlab/zscsdcsd-3390",
-      "pubDate": "Fri, 25 Jul 2025 04:45:20 +0000",
-      "source": "Dev.to JavaScript"
-    },
-    {
-      "id": "Hacker News-https://news.ycombinator.com/item?id=44679635",
-      "title": "You won't believe what this AI said after deleting a database",
-      "description": "Sin descripción",
-      "content": "Sin contenido",
-      "link": "https://smallcultfollowing.com/babysteps/blog/2025/07/24/collaborative-ai-prompting/",
-      "pubDate": "Fri, 25 Jul 2025 04:38:30 +0000",
-      "source": "Hacker News"
-    },
-    {
-      "id": "Hacker News-https://news.ycombinator.com/item?id=44679628",
-      "title": "Treat Your Spouse as an Investor",
-      "description": "Sin descripción",
-      "content": "Sin contenido",
-      "link": "https://www.skmurphy.com/blog/2024/01/20/treat-your-spouse-as-an-investor/",
-      "pubDate": "Fri, 25 Jul 2025 04:37:53 +0000",
-      "source": "Hacker News"
-    },
-    {
-      "id": "Dev.to JavaScript-https://dev.to/urbanisierung/ai-no-longer-an-exception-it-is-the-norm-99b",
-      "title": "AI: No longer an exception. It is the norm.",
-      "description": "Sin descripción",
-      "content": "Sin contenido",
-      "link": "https://dev.to/urbanisierung/ai-no-longer-an-exception-it-is-the-norm-99b",
-      "pubDate": "Fri, 25 Jul 2025 04:37:17 +0000",
-      "source": "Dev.to JavaScript"
-    },
-    {
-      "id": "Hacker News-https://news.ycombinator.com/item?id=44679602",
-      "title": "Bereshit R* Analytics",
-      "description": "Sin descripción",
-      "content": "Sin contenido",
-      "link": "https://preview--bereshit-ram-analytics.lovable.app/",
-      "pubDate": "Fri, 25 Jul 2025 04:32:41 +0000",
-      "source": "Hacker News"
-    },
-    {
-      "id": "Hacker News-https://news.ycombinator.com/item?id=44679596",
-      "title": "First permanent Pokemon theme park to open in Tokyo",
-      "description": "Sin descripción",
-      "content": "Sin contenido",
-      "link": "https://www.rte.ie/news/business/2025/0723/1524891-first-pokemon-theme-park-to-open/",
-      "pubDate": "Fri, 25 Jul 2025 04:30:35 +0000",
-      "source": "Hacker News"
-    },
-    {
-      "id": "Hacker News-https://news.ycombinator.com/item?id=44679587",
-      "title": "Show HN: NeoArchive – Offline Android File Manager with 25 Tools",
-      "description": "Sin descripción",
-      "content": "Sin contenido",
-      "link": "https://play.google.com/store/apps/details?id=com.tool4file.neo_archive&amp;hl=en_US",
-      "pubDate": "Fri, 25 Jul 2025 04:29:13 +0000",
-      "source": "Hacker News"
-    },
-    {
-      "id": "Hacker News-https://news.ycombinator.com/item?id=44679585",
-      "title": "Ask HN: How to report an UX issue/improvement to Uber?",
-      "description": "Sin descripción",
-      "content": "Sin contenido",
-      "link": "https://news.ycombinator.com/item?id=44679585",
-      "pubDate": "Fri, 25 Jul 2025 04:29:06 +0000",
-      "source": "Hacker News"
-    },
-    {
-      "id": "Hacker News-https://news.ycombinator.com/item?id=44679582",
-      "title": "Show HN: I'm Tired Now",
-      "description": "Sin descripción",
-      "content": "Sin contenido",
-      "link": "https://news.ycombinator.com/item?id=44679582",
-      "pubDate": "Fri, 25 Jul 2025 04:27:41 +0000",
-      "source": "Hacker News"
-    },
-    {
-      "id": "Hacker News-https://news.ycombinator.com/item?id=44679552",
-      "title": "Show HN: Watch babies being born worldwide on the live Baby Map – babymap.org",
-      "description": "Sin descripción",
-      "content": "Sin contenido",
-      "link": "https://babymap.org",
-      "pubDate": "Fri, 25 Jul 2025 04:17:41 +0000",
-      "source": "Hacker News"
-    },
-    {
-      "id": "Dev.to JavaScript-https://dev.to/gsmalina/motorola-mobile-devices-android-16-final-update-devices-list-2b98",
-      "title": "Motorola Mobile Devices Android 16 Final Update devices list",
-      "description": "Sin descripción",
-      "content": "Sin contenido",
-      "link": "https://dev.to/gsmalina/motorola-mobile-devices-android-16-final-update-devices-list-2b98",
-      "pubDate": "Fri, 25 Jul 2025 04:16:11 +0000",
-      "source": "Dev.to JavaScript"
-    },
-    {
-      "id": "Hacker News-https://news.ycombinator.com/item?id=44679534",
-      "title": "Pesntester that want's to live in NL",
-      "description": "Sin descripción",
-      "content": "Sin contenido",
-      "link": "https://news.ycombinator.com/item?id=44679534",
-      "pubDate": "Fri, 25 Jul 2025 04:13:39 +0000",
-      "source": "Hacker News"
-    },
-    {
-      "id": "Hacker News-https://news.ycombinator.com/item?id=44679517",
-      "title": "Fossils unearthed in Grand Canyon reveal new details of Cambrian explosion",
-      "description": "Sin descripción",
-      "content": "Sin contenido",
-      "link": "https://www.cnn.com/2025/07/24/science/grand-canyon-fossils-goldilocks-cambrian-explosion",
-      "pubDate": "Fri, 25 Jul 2025 04:11:07 +0000",
-      "source": "Hacker News"
-    },
-    {
-      "id": "Hacker News-https://news.ycombinator.com/item?id=44679508",
-      "title": "Where Are Vacation Homes Located in the US?",
-      "description": "Sin descripción",
-      "content": "Sin contenido",
-      "link": "https://www.construction-physics.com/p/where-are-vacation-homes-located",
-      "pubDate": "Fri, 25 Jul 2025 04:08:54 +0000",
-      "source": "Hacker News"
-    },
-    {
-      "id": "Hacker News-https://news.ycombinator.com/item?id=44679489",
-      "title": "Tap into the \"Hemingway effect\" to finish what you start",
-      "description": "Sin descripción",
-      "content": "Sin contenido",
-      "link": "https://bigthinkmedia.substack.com/p/tap-into-the-hemingway-effect-to",
-      "pubDate": "Fri, 25 Jul 2025 04:03:55 +0000",
-      "source": "Hacker News"
-    },
-    {
-      "id": "Hacker News-https://news.ycombinator.com/item?id=44679480",
-      "title": "Show HN: I built a SaaS that makes creating TikTok/IG slideshows dead easy",
-      "description": "Sin descripción",
-      "content": "Sin contenido",
-      "link": "https://www.slideshowgen.com",
-      "pubDate": "Fri, 25 Jul 2025 04:02:39 +0000",
-      "source": "Hacker News"
-    },
-    {
-      "id": "Dev.to JavaScript-https://dev.to/dariomannu/oop-is-the-middle-ages-fp-is-the-enlightenment-frp-is-impressionism-sop-is-the-modern-minimalism-487j",
-      "title": "OOP is the middle ages, FP is the enlightenment, FRP is impressionism, SOP is the modern minimalism",
-      "description": "Sin descripción",
-      "content": "Sin contenido",
-      "link": "https://dev.to/dariomannu/oop-is-the-middle-ages-fp-is-the-enlightenment-frp-is-impressionism-sop-is-the-modern-minimalism-487j",
-      "pubDate": "Fri, 25 Jul 2025 04:00:00 +0000",
-      "source": "Dev.to JavaScript"
-    },
-    {
-      "id": "Hacker News-https://news.ycombinator.com/item?id=44679406",
-      "title": "Against the censorship of adult content by payment processors",
-      "description": "Sin descripción",
-      "content": "Sin contenido",
-      "link": "https://soatok.blog/2025/07/24/against-the-censorship-of-adult-content-by-payment-processors/",
-      "pubDate": "Fri, 25 Jul 2025 03:49:10 +0000",
-      "source": "Hacker News"
-    },
-    {
       "id": "Hacker News-https://news.ycombinator.com/item?id=44679340",
       "title": "Google ordered to pay Argentine pictured naked in garden",
       "description": "Sin descripción",
@@ -217,6 +19,78 @@
       "source": "Hacker News"
     },
     {
+      "id": "Hacker News-https://news.ycombinator.com/item?id=44679308",
+      "title": "Show HN: Blueboots – A retro themed Fedora OS built with one Containerfile",
+      "description": "Sin descripción",
+      "content": "Sin contenido",
+      "link": "https://github.com/bluebootsy/os",
+      "pubDate": "Fri, 25 Jul 2025 03:30:32 +0000",
+      "source": "Hacker News"
+    },
+    {
+      "id": "Hacker News-https://news.ycombinator.com/item?id=44679234",
+      "title": "Efrit: A native elisp coding agent running in Emacs",
+      "description": "Sin descripción",
+      "content": "Sin contenido",
+      "link": "https://github.com/steveyegge/efrit",
+      "pubDate": "Fri, 25 Jul 2025 03:20:00 +0000",
+      "source": "Hacker News"
+    },
+    {
+      "id": "Hacker News-https://news.ycombinator.com/item?id=44679221",
+      "title": "Show HN: I built a notion ai agent",
+      "description": "Sin descripción",
+      "content": "Sin contenido",
+      "link": "https://www.youtube.com/watch?v=Uu3Np3bG9v4",
+      "pubDate": "Fri, 25 Jul 2025 03:18:16 +0000",
+      "source": "Hacker News"
+    },
+    {
+      "id": "Hacker News-https://news.ycombinator.com/item?id=44679220",
+      "title": "Ask HN: Should HN introduce a \"Tell HN\" tab?",
+      "description": "Sin descripción",
+      "content": "Sin contenido",
+      "link": "https://news.ycombinator.com/item?id=44679220",
+      "pubDate": "Fri, 25 Jul 2025 03:17:55 +0000",
+      "source": "Hacker News"
+    },
+    {
+      "id": "Hacker News-https://news.ycombinator.com/item?id=44679210",
+      "title": "Distro-Hopping and RICEing",
+      "description": "Sin descripción",
+      "content": "Sin contenido",
+      "link": "https://l-o-o-s-e-d.net/distro-hopping",
+      "pubDate": "Fri, 25 Jul 2025 03:16:26 +0000",
+      "source": "Hacker News"
+    },
+    {
+      "id": "Hacker News-https://news.ycombinator.com/item?id=44679208",
+      "title": "Show HN: AI image generator with 6 artistic mentors for better prompts",
+      "description": "Sin descripción",
+      "content": "Sin contenido",
+      "link": "https://createvision.ai",
+      "pubDate": "Fri, 25 Jul 2025 03:16:23 +0000",
+      "source": "Hacker News"
+    },
+    {
+      "id": "Hacker News-https://news.ycombinator.com/item?id=44679198",
+      "title": "Equilibrium in the Embedding Space: When Novelty Becomes Familiar",
+      "description": "Sin descripción",
+      "content": "Sin contenido",
+      "link": "https://lightcapai.medium.com/equilibrium-in-the-embedding-space-when-novelty-becomes-familiar-547862bdd38f",
+      "pubDate": "Fri, 25 Jul 2025 03:15:07 +0000",
+      "source": "Hacker News"
+    },
+    {
+      "id": "Hacker News-https://news.ycombinator.com/item?id=44679191",
+      "title": "Show HN: Add viral TikTok audio to work meetings",
+      "description": "Sin descripción",
+      "content": "Sin contenido",
+      "link": "https://soundboard.recall.ai/",
+      "pubDate": "Fri, 25 Jul 2025 03:14:36 +0000",
+      "source": "Hacker News"
+    },
+    {
       "id": "Dev.to JavaScript-https://dev.to/manojspace/javascript-maps-vs-objects-30-essential-questions-every-developer-should-know-49ga",
       "title": "JavaScript Maps vs Objects: 30 Essential Questions Every Developer Should Know",
       "description": "Sin descripción",
@@ -224,6 +98,96 @@
       "link": "https://dev.to/manojspace/javascript-maps-vs-objects-30-essential-questions-every-developer-should-know-49ga",
       "pubDate": "Fri, 25 Jul 2025 03:10:50 +0000",
       "source": "Dev.to JavaScript"
+    },
+    {
+      "id": "Hacker News-https://news.ycombinator.com/item?id=44679135",
+      "title": "RustMailer – Week 1 Update: 729 Views, 165 Clones, 13 Stars (in 9 Days)",
+      "description": "Sin descripción",
+      "content": "Sin contenido",
+      "link": "https://www.indiehackers.com/post/rustmailer-week-1-update-729-views-165-clones-13-stars-in-9-days-9zDlC2HmjXFH7mKzcmpb",
+      "pubDate": "Fri, 25 Jul 2025 03:04:29 +0000",
+      "source": "Hacker News"
+    },
+    {
+      "id": "Hacker News-https://news.ycombinator.com/item?id=44679122",
+      "title": "Good Docs Describe, Bad Docs Prescribe",
+      "description": "Sin descripción",
+      "content": "Sin contenido",
+      "link": "https://rethinkingsoftware.substack.com/p/good-docs-describe-bad-docs-prescribe",
+      "pubDate": "Fri, 25 Jul 2025 03:01:55 +0000",
+      "source": "Hacker News"
+    },
+    {
+      "id": "Hacker News-https://news.ycombinator.com/item?id=44679086",
+      "title": "Show HN: Crawell – Extract any page as Markdown or download images in bulk",
+      "description": "Sin descripción",
+      "content": "Sin contenido",
+      "link": "https://chromewebstore.google.com/detail/crawell/cmfcognoilmabnclomeehljmknallaaa",
+      "pubDate": "Fri, 25 Jul 2025 02:55:40 +0000",
+      "source": "Hacker News"
+    },
+    {
+      "id": "Hacker News-https://news.ycombinator.com/item?id=44679058",
+      "title": "Running Serverless WASM Functions on the Edge with K3s and SpinKube",
+      "description": "Sin descripción",
+      "content": "Sin contenido",
+      "link": "https://www.fermyon.com/blog/spinkube-k3s",
+      "pubDate": "Fri, 25 Jul 2025 02:51:15 +0000",
+      "source": "Hacker News"
+    },
+    {
+      "id": "Hacker News-https://news.ycombinator.com/item?id=44679048",
+      "title": "Asciinema: Record and share your terminal sessions",
+      "description": "Sin descripción",
+      "content": "Sin contenido",
+      "link": "https://asciinema.org",
+      "pubDate": "Fri, 25 Jul 2025 02:50:32 +0000",
+      "source": "Hacker News"
+    },
+    {
+      "id": "Hacker News-https://news.ycombinator.com/item?id=44679023",
+      "title": "Chinese drones carry 180ton of steel and concrete up mountain in pioneering feat",
+      "description": "Sin descripción",
+      "content": "Sin contenido",
+      "link": "https://www.scmp.com/news/china/politics/article/3319460/chinese-drones-carry-180-tonnes-steel-and-concrete-mountain-pioneering-feat",
+      "pubDate": "Fri, 25 Jul 2025 02:46:52 +0000",
+      "source": "Hacker News"
+    },
+    {
+      "id": "Hacker News-https://news.ycombinator.com/item?id=44679013",
+      "title": "Benchmarking LLMs on open source Vulkan",
+      "description": "Sin descripción",
+      "content": "Sin contenido",
+      "link": "https://airlied.blogspot.com/2025/07/ramalamamesa-benchmarks-on-my-hardware.html",
+      "pubDate": "Fri, 25 Jul 2025 02:46:10 +0000",
+      "source": "Hacker News"
+    },
+    {
+      "id": "Hacker News-https://news.ycombinator.com/item?id=44679009",
+      "title": "FCC approves Paramount-Skydance merger after Trump settlement, Colbert cancelled",
+      "description": "Sin descripción",
+      "content": "Sin contenido",
+      "link": "https://turnto10.com/news/nation-world/fcc-approves-8b-paramount-skydance-merger-after-trump-settlement-colbert-cancellation-bias-dei-trusted-local-news-lawsuit",
+      "pubDate": "Fri, 25 Jul 2025 02:44:45 +0000",
+      "source": "Hacker News"
+    },
+    {
+      "id": "Hacker News-https://news.ycombinator.com/item?id=44678965",
+      "title": "PocketPages: No-Build Multi-Page Apps for PocketBase",
+      "description": "Sin descripción",
+      "content": "Sin contenido",
+      "link": "https://pocketpages.dev/",
+      "pubDate": "Fri, 25 Jul 2025 02:39:54 +0000",
+      "source": "Hacker News"
+    },
+    {
+      "id": "Hacker News-https://news.ycombinator.com/item?id=44678948",
+      "title": "The Economics of Superintelligence",
+      "description": "Sin descripción",
+      "content": "Sin contenido",
+      "link": "https://www.economist.com/leaders/2025/07/24/the-economics-of-superintelligence",
+      "pubDate": "Fri, 25 Jul 2025 02:37:12 +0000",
+      "source": "Hacker News"
     },
     {
       "id": "Dev.to JavaScript-https://dev.to/codewithrajat/avoid-these-angular-signals-mistakes-a-must-read-for-every-developer-3d72",
@@ -286,6 +250,42 @@
       "content": "Sin contenido",
       "link": "https://dev.to/abdo-mh/introducing-textrix-an-open-source-mediumcom-style-editor-for-publishing-platforms-43md",
       "pubDate": "Thu, 24 Jul 2025 23:11:16 +0000",
+      "source": "Dev.to JavaScript"
+    },
+    {
+      "id": "Dev.to JavaScript-https://dev.to/atheodosiou/async-in-javascript-served-hot-the-chefs-guide-to-the-event-loop-536a",
+      "title": "Async in JavaScript, Served Hot: The Chef’s guide to the Event Loop",
+      "description": "Sin descripción",
+      "content": "Sin contenido",
+      "link": "https://dev.to/atheodosiou/async-in-javascript-served-hot-the-chefs-guide-to-the-event-loop-536a",
+      "pubDate": "Thu, 24 Jul 2025 23:08:20 +0000",
+      "source": "Dev.to JavaScript"
+    },
+    {
+      "id": "Dev.to JavaScript-https://dev.to/udochukwu345/intranet-for-liro-1e32",
+      "title": "Intranet for Liro",
+      "description": "Sin descripción",
+      "content": "Sin contenido",
+      "link": "https://dev.to/udochukwu345/intranet-for-liro-1e32",
+      "pubDate": "Thu, 24 Jul 2025 22:55:00 +0000",
+      "source": "Dev.to JavaScript"
+    },
+    {
+      "id": "Dev.to JavaScript-https://dev.to/sidi_yahya_0063ac8343dbd6/a-recent-study-reveals-the-use-of-artificial-intelligence-in-writing-negatively-affects-brain-45ej",
+      "title": "A recent study reveals.. The use of artificial intelligence in writing negatively affects brain activity",
+      "description": "Sin descripción",
+      "content": "Sin contenido",
+      "link": "https://dev.to/sidi_yahya_0063ac8343dbd6/a-recent-study-reveals-the-use-of-artificial-intelligence-in-writing-negatively-affects-brain-45ej",
+      "pubDate": "Thu, 24 Jul 2025 22:40:47 +0000",
+      "source": "Dev.to JavaScript"
+    },
+    {
+      "id": "Dev.to JavaScript-https://dev.to/trixahub/stop-googling-for-tiny-tools-i-made-a-site-that-has-all-the-useful-ones-in-one-place-no-login-3nhg",
+      "title": "Stop Googling for Tiny Tools — I Made a Site That Has All the Useful Ones in One Place (No Login. No Ads.)",
+      "description": "Sin descripción",
+      "content": "Sin contenido",
+      "link": "https://dev.to/trixahub/stop-googling-for-tiny-tools-i-made-a-site-that-has-all-the-useful-ones-in-one-place-no-login-3nhg",
+      "pubDate": "Thu, 24 Jul 2025 21:32:05 +0000",
       "source": "Dev.to JavaScript"
     },
     {
@@ -424,5 +424,5 @@
       "source": "Genbeta"
     }
   ],
-  "lastUpdated": "2025-07-25T05:12:49.132Z"
+  "lastUpdated": "2025-07-25T06:43:48.273Z"
 }
