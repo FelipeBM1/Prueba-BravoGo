@@ -1,0 +1,50 @@
+name: Actualizar Feeds RSS
+
+on:
+  schedule:
+    # Ejecutar todos los días a las 6:00 AM UTC (24 horas)
+    - cron: '0 6 * * *'
+  workflow_dispatch: # Permitir activación manual
+  push:
+    branches: [ main ]
+
+jobs:
+  update-rss:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout del repositorio
+      uses: actions/checkout@v4
+      
+    - name: Configurar Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Instalar dependencias
+      run: npm ci
+      
+    - name: Obtener feeds RSS
+      run: npm run fetch-rss
+      env:
+        RSS_SOURCES: ${{ vars.RSS_SOURCES || '' }}
+        
+    - name: Construir aplicación
+      run: npm run build
+      
+    - name: Desplegar a Vercel
+      uses: amondnet/vercel-action@v25
+      with:
+        vercel-token: ${{ secrets.VERCEL_TOKEN }}
+        vercel-org-id: ${{ secrets.ORG_ID }}
+        vercel-project-id: ${{ secrets.PROJECT_ID }}
+        vercel-args: '--prod'
+        
+    - name: Commit de datos RSS actualizados
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add data/rss-feed.json
+        git diff --staged --quiet || git commit -m "Actualizar feeds RSS - $(date)"
+        git push
