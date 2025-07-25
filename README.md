@@ -14,8 +14,8 @@ Un lector de RSS moderno que agrega múltiples fuentes de noticias en un solo lu
 
 ## 🛠️ Tecnologías Utilizadas
 
-- **Frontend**: Next.js 14, TypeScript, Tailwind CSS
-- **UI Components**: Componentes personalizados con shadcn/ui
+- **Frontend**: Next.js 14, TypeScript, CSS Puro
+- **UI Components**: Componentes personalizados sin dependencias externas
 - **RSS Parsing**: Parser XML personalizado con fetch nativo
 - **CI/CD**: GitHub Actions
 - **Deploy**: Vercel
@@ -245,4 +245,3 @@ Si tienes problemas con la implementación:
 
 ---
 
-**Nota**: Este proyecto demuestra habilidades en desarrollo full-stack, automatización, testing y deploy, siguiendo las mejores prácticas de desarrollo moderno. Todos los comentarios están en español para facilitar el mantenimiento y comprensión del código.
