@@ -11,7 +11,9 @@
     "test": "jest --passWithNoTests",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "fetch-rss": "node scripts/fetch-rss.js"
+    "fetch-rss": "node scripts/fetch-rss.js",
+    "deploy-check": "node scripts/deploy-check.js",
+    "vercel-deploy": "vercel --prod"
   },
   "dependencies": {
     "next": "14.2.16",
@@ -32,7 +34,8 @@
     "@testing-library/user-event": "^14.5.1",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
-    "babel-jest": "^29.7.0"
+    "babel-jest": "^29.7.0",
+    "vercel": "^37.0.0"
   },
   "keywords": ["rss", "reader", "news", "aggregator", "nextjs", "typescript"],
   "author": "RSS Reader Team",
