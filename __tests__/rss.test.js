@@ -3,10 +3,13 @@
  * Pruebas unitarias para parsing RSS y procesamiento de datos
  */
 
-const { fetchRSSSource, stripHtml } = require("../scripts/fetch-rss")
-const jest = require("jest")
+const { fetchRSSSource, stripHtml, parseRSSXML } = require("../scripts/fetch-rss")
 
 describe("Lector RSS", () => {
+  beforeEach(() => {
+    fetch.mockClear()
+  })
+
   describe("stripHtml", () => {
     test("debería eliminar etiquetas HTML básicas", () => {
       const html = "<p>Texto de prueba</p>"
@@ -23,20 +26,74 @@ describe("Lector RSS", () => {
       expect(stripHtml(text)).toBe("Solo texto plano")
     })
 
+    test("debería manejar texto vacío", () => {
+      expect(stripHtml("")).toBe("")
+      expect(stripHtml(null)).toBe("")
+      expect(stripHtml(undefined)).toBe("")
+    })
+
     test("debería eliminar espacios extra", () => {
       const html = "  <p>  Texto con espacios  </p>  "
       expect(stripHtml(html)).toBe("Texto con espacios")
     })
   })
 
-  describe("fetchRSSSource", () => {
-    // Mock de fetch global
-    global.fetch = jest.fn()
+  describe("parseRSSXML", () => {
+    test("debería parsear XML RSS básico", () => {
+      const mockXML = `
+        <rss>
+          <channel>
+            <item>
+              <title>Artículo de Prueba</title>
+              <description>Descripción de prueba</description>
+              <link>https://ejemplo.com/articulo</link>
+              <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+              <guid>test-guid</guid>
+            </item>
+          </channel>
+        </rss>
+      `
 
-    beforeEach(() => {
-      fetch.mockClear()
+      const result = parseRSSXML(mockXML)
+      expect(result.items).toHaveLength(1)
+      expect(result.items[0]).toMatchObject({
+        title: "Artículo de Prueba",
+        description: "Descripción de prueba",
+        link: "https://ejemplo.com/articulo",
+        pubDate: "Mon, 01 Jan 2024 00:00:00 GMT",
+        guid: "test-guid",
+      })
     })
 
+    test("debería manejar XML con CDATA", () => {
+      const mockXML = `
+        <rss>
+          <channel>
+            <item>
+              <title><![CDATA[Título con CDATA]]></title>
+              <description><![CDATA[Descripción con CDATA]]></description>
+              <link>https://ejemplo.com/articulo</link>
+            </item>
+          </channel>
+        </rss>
+      `
+
+      const result = parseRSSXML(mockXML)
+      expect(result.items).toHaveLength(1)
+      expect(result.items[0].title).toBe("Título con CDATA")
+      expect(result.items[0].description).toBe("Descripción con CDATA")
+    })
+
+    test("debería manejar XML vacío o inválido", () => {
+      const result = parseRSSXML("")
+      expect(result.items).toHaveLength(0)
+
+      const result2 = parseRSSXML("<invalid>xml</invalid>")
+      expect(result2.items).toHaveLength(0)
+    })
+  })
+
+  describe("fetchRSSSource", () => {
     test("debería manejar respuesta RSS exitosa", async () => {
       const mockXML = `
         <rss>
@@ -95,6 +152,22 @@ describe("Lector RSS", () => {
       const source = {
         url: "https://ejemplo.com/feed-inexistente.xml",
         name: "Fuente Inexistente",
+      }
+
+      const result = await fetchRSSSource(source)
+
+      expect(result).toEqual([])
+    })
+
+    test("debería manejar respuestas vacías", async () => {
+      fetch.mockResolvedValue({
+        ok: true,
+        text: () => Promise.resolve(""),
+      })
+
+      const source = {
+        url: "https://ejemplo.com/feed-vacio.xml",
+        name: "Fuente Vacía",
       }
 
       const result = await fetchRSSSource(source)

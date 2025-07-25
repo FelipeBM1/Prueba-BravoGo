@@ -8,18 +8,37 @@ const createJestConfig = nextJest({
 // Add any custom config to be passed to Jest
 const customJestConfig = {
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
-  moduleNameMapping: {
+  moduleNameMapper: {
     // Handle module aliases (this will be automatically configured for you based on your tsconfig.json paths)
     "^@/components/(.*)$": "<rootDir>/components/$1",
-    "^@/pages/(.*)$": "<rootDir>/pages/$1",
+    "^@/lib/(.*)$": "<rootDir>/lib/$1",
+    "^@/app/(.*)$": "<rootDir>/app/$1",
   },
-  testEnvironment: "jest-environment-jsdom",
+  testEnvironment: "jsdom",
   collectCoverageFrom: [
     "app/**/*.{js,jsx,ts,tsx}",
     "scripts/**/*.{js,jsx,ts,tsx}",
+    "components/**/*.{js,jsx,ts,tsx}",
+    "lib/**/*.{js,jsx,ts,tsx}",
     "!**/*.d.ts",
     "!**/node_modules/**",
+    "!**/.next/**",
   ],
+  testPathIgnorePatterns: ["<rootDir>/.next/", "<rootDir>/node_modules/"],
+  transform: {
+    "^.+\\.(js|jsx|ts|tsx)$": ["babel-jest", { presets: ["next/babel"] }],
+  },
+  // Configuración adicional para evitar warnings
+  globals: {
+    "ts-jest": {
+      tsconfig: {
+        jsx: "react-jsx",
+      },
+    },
+  },
+  // Silenciar warnings específicos
+  silent: false,
+  verbose: true,
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async

@@ -122,7 +122,6 @@ async function fetchRSSSource(source) {
       headers: {
         "User-Agent": "RSS-Reader/1.0",
       },
-      timeout: 10000, // 10 segundos timeout
     })
 
     if (!response.ok) {
